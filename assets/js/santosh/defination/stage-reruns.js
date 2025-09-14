@@ -1,6 +1,6 @@
 import GET_STACKED_BAR_TEMPLATE from "./stacked-bar";
 import {getBarSeries} from "../template";
-import {getDateFromTimestampString, secondsToHms} from "../utils";
+import {getDateFromTimestampString, groupBy, secondsToHms} from "../utils";
 import TooltipManager from "../TooltipManager";
 
 /**
