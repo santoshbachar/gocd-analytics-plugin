@@ -15,6 +15,7 @@ import waitBuildTimeRatioHeader from "./wait-build-time-ratio-header";
 import agentMetricsHeader from "./agent-metrics-header";
 import doraMetricsHeader from "./dora-metrics-header";
 import pipelineStateSummaryHeader from "./pipeline-state-summary-header";
+import {StageRerunsViewState} from "../../constants";
 
 class Header {
 
@@ -538,6 +539,7 @@ class Header {
 
     async getStageRerunsHeader(changeHandler) {
         let settings = {
+          view: StageRerunsViewState.CUSTOM,
             selectedPipeline: '',
             requestOrder: 'DESC',
             requestLimit: 10,
