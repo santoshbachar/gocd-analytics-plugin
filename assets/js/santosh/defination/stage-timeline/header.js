@@ -561,7 +561,6 @@ class Header {
         handlePipelineSelect(selectors.pipelineSelector);
         // handleRequestResultSelect(selectors.requestResultSelector);
         handleRequestOrderSelect(selectors.requestOrderSelector);
-        handleRequestLimitInput(selectors.requestLimitInput);
         // handleResultSelect(selectors.resultFilterSelector);
         // handleDataSelect(selectors.dataFilterSelector);
         // handleLegendSelect(selectors.legendVisibilityFilterSelector);

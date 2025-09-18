@@ -8,7 +8,6 @@ let dateFilterSelector = undefined;
 let pipelineSelector = undefined;
 let dateSelector = undefined;
 let requestOrderSelector = undefined;
-let requestLimitInput = undefined;
 
 async function stageRerunsHeader(pipelines, settingsDOM, dateSelectedEvent) {
 
@@ -17,7 +16,6 @@ async function stageRerunsHeader(pipelines, settingsDOM, dateSelectedEvent) {
     dateFilterSelector = document.getElementById("dateFilter");
     pipelineSelector = document.getElementById("pipeline");
     requestOrderSelector = document.getElementById("requestOrder");
-    requestLimitInput = document.getElementById("requestLimit");
 
     const dm = new DateManager();
     const datePicker = await dm.addDatelitePickerDiv(dateFilterSelector, dateSelectedEvent);
@@ -46,7 +44,6 @@ async function stageRerunsHeader(pipelines, settingsDOM, dateSelectedEvent) {
         dateFilterSelector: dateFilterSelector,
         pipelineSelector,
         requestOrderSelector,
-        requestLimitInput,
     };
 }
 
@@ -59,9 +56,6 @@ async function addOptionHeader(settingsDOM) {
       
       <div style="display: flex; flex-direction: row; flex-grow: 1">
          Order: <select id="requestOrder"></select>
-      </div>
-      <div style="display: flex; flex-direction: row; flex-grow: 1">
-         Limit: <input id="requestLimit" type="number" min="1" value="10"/>
       </div>
       <div style="display: flex; flex-direction: row; flex-grow: 7">
         Pipeline: <select id="pipeline"></select>
