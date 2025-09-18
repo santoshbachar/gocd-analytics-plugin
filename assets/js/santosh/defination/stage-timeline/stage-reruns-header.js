@@ -50,15 +50,20 @@ async function stageRerunsHeader(pipelines, settingsDOM, dateSelectedEvent) {
 async function addOptionHeader(settingsDOM) {
     settingsDOM.innerHTML = `
 <div style="position:relative; display: flex; flex-direction: column">
+  <div id="setting-header" style="display: flex; flex-direction: row">
+    <div style="font-size:18px; flex-grow: 1">
+      <b>Stage re-runs</b>
+    </div>
+    <div style="display: flex; flex-direction: row; flex-grow: 5">
+        for Pipeline: <select id="pipeline"></select>
+    </div>
+   </div>
    <div id="setting-1" style="display: flex; flex-direction: row">
-      <div style="font-size:18px; flex-grow: 1"><b>Settings</b></div>
+      <div style="font-size:16px; flex-grow: 1"><b>Associated Settings</b></div>
       <span id="dateFilter"></span>
       
       <div style="display: flex; flex-direction: row; flex-grow: 1">
          Order: <select id="requestOrder"></select>
-      </div>
-      <div style="display: flex; flex-direction: row; flex-grow: 7">
-        Pipeline: <select id="pipeline"></select>
       </div>
    </div>
 </div>
