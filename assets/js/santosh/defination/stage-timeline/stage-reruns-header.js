@@ -47,6 +47,14 @@ async function stageRerunsHeader(pipelines, settingsDOM, dateSelectedEvent) {
     };
 }
 
+const custom_date_setting_html = `
+  <span id="dateFilter"></span>
+      
+      <div style="display: flex; flex-direction: row; flex-grow: 1">
+         Order: <select id="requestOrder"></select>
+      </div>
+`;
+
 async function addOptionHeader(settingsDOM) {
     settingsDOM.innerHTML = `
 <div style="position:relative; display: flex; flex-direction: column">
