@@ -24,6 +24,7 @@ async function stageRerunsHeader(pipelines, settingsDOM, dateSelectedEvent) {
     datePicker.hide();
 
     dateFilterSelector.addEventListener("click", onDatePickerClick);
+    viewSelector.addEventListener("change", onViewClick);
 
     function onDatePickerClick() {
         datePicker.show();
