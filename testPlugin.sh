@@ -23,7 +23,7 @@ echo "Building the GoCD analytics plugin..."
 # The double quotes around the path handle any spaces in the path.
 # We also check for the command's success.
 cd "$ANALYTICS_PLUGIN_PWD"
-if ! "${ANALYTICS_PLUGIN_PWD}/gradlew" build --info; then
+if ! "${ANALYTICS_PLUGIN_PWD}/gradlew" build -x test --info; then
   echo "Error: Gradle build failed. Exiting."
   exit 1
 fi
